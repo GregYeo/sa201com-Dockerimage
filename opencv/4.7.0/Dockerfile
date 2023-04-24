@@ -16,7 +16,7 @@ RUN apt-get update && \
 RUN apt-get update && \
     apt-get install -y \
         ant && \
-    ant --version
+    ant -version
 
 ENV OPENCV_SOURCE_DIR="/tmp/opencv"
 ENV OPEN_CV_VERSION="4.7.0"
