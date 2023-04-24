@@ -13,6 +13,11 @@ RUN apt-get update && \
         libtiff-dev \
         libwebp-dev
 
+RUN apt-get update && \
+    apt-get install -y \
+        ant && \
+    ant --version
+
 ENV OPENCV_SOURCE_DIR="/tmp/opencv"
 ENV OPEN_CV_VERSION="4.7.0"
 
