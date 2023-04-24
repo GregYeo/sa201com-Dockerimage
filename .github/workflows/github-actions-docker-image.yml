@@ -16,6 +16,9 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Print docker-compose.yml
+        run: docker-compose config
+
       - name: Build Docker Image
         run: docker-compose build
 
