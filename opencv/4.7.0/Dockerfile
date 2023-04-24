@@ -25,8 +25,7 @@ RUN mkdir -p ${OPENCV_SOURCE_DIR} && \
     cd ${OPENCV_SOURCE_DIR} && \
     curl -o opencv.zip -L https://github.com/opencv/opencv/archive/refs/tags/${OPEN_CV_VERSION}.zip && \
     unzip opencv.zip && \
-	cd ${OPENCV_SOURCE_DIR}/opencv-${OPEN_CV_VERSION} && \
-	mkdir -p build && cd build && \
+    mkdir -p build && cd build && \
 	cmake \
         -D BUILD_DOCS=OFF \
         -D BUILD_TESTS=OFF \
@@ -42,7 +41,8 @@ RUN mkdir -p ${OPENCV_SOURCE_DIR} && \
 	    -D BUILD_ZLIB=OFF \
 	    -D WITH_OPENEXR=OFF \
 		-D BUILD_opencv_java=ON \
-		.. && \
+		../opencv-${OPEN_CV_VERSION} && \
     make -j7 install && \
+    opencv_version && \
     rm -rf ${OPENCV_SOURCE_DIR}
 
