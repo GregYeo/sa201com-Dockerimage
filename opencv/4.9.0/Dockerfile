@@ -19,7 +19,7 @@ RUN apt-get update && \
     ant -version
 
 ENV OPENCV_SOURCE_DIR="/tmp/opencv"
-ENV OPEN_CV_VERSION="4.7.0"
+ENV OPEN_CV_VERSION="4.9.0"
 
 RUN mkdir -p ${OPENCV_SOURCE_DIR} && \
     cd ${OPENCV_SOURCE_DIR} && \
