@@ -12,4 +12,16 @@ services:
         BASE_IMAGE: sa201/amazoncorretto:11-ubuntu-22.04
     depends_on:
       - amazoncorretto_11_ubuntu_22.04
+  amazoncorretto_17_ubuntu_22.04:
+    image: sa201/amazoncorretto:17-ubuntu-22.04
+    build:
+      context: jvm/amazon_corretto/17
+  opencv_4.7.0_jdk17_ubuntu_22.04:
+    image: sa201/opencv:4.7.0-jdk17-ubuntu-22.04
+    build:
+      context: opencv/4.7.0
+      args:
+        BASE_IMAGE: sa201/amazoncorretto:17-ubuntu-22.04
+    depends_on:
+      - amazoncorretto_17_ubuntu_22.04
 
