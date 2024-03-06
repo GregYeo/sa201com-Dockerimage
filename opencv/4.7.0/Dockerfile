@@ -43,6 +43,5 @@ RUN mkdir -p ${OPENCV_SOURCE_DIR} && \
 		-D BUILD_opencv_java=ON \
 		../opencv-${OPEN_CV_VERSION} && \
     make -j7 install && \
-    opencv_version && \
     rm -rf ${OPENCV_SOURCE_DIR}
 
