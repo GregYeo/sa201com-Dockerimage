@@ -19,6 +19,9 @@ jobs:
       - name: Print docker-compose.yml
         run: docker-compose config
 
+      - name: Pull Docker Image to have caches
+        run: docker-compose pull || true
+
       - name: Build Docker Image
         run: docker-compose build
 
