@@ -4,10 +4,14 @@ services:
     image: sa201/amazoncorretto:11-ubuntu-22.04
     build:
       context: jvm/amazon_corretto/11
+      cache_from:
+        - sa201/amazoncorretto:11-ubuntu-22.04
   opencv_4.9.0_ubuntu_22.04:
     image: sa201/opencv:4.9.0-ubuntu-22.04
     build:
       context: opencv/4.9.0
+      cache_from:
+        - sa201/opencv:4.9.0-ubuntu-22.04
       args:
         BASE_IMAGE: sa201/amazoncorretto:11-ubuntu-22.04
     depends_on:
@@ -17,10 +21,14 @@ services:
     image: sa201/amazoncorretto:17-ubuntu-22.04
     build:
       context: jvm/amazon_corretto/17
+      cache_from:
+        - sa201/amazoncorretto:17-ubuntu-22.04
   opencv_4.9.0_jdk17_ubuntu_22.04:
     image: sa201/opencv:4.9.0-jdk17-ubuntu-22.04
     build:
       context: opencv/4.9.0
+      cache_from:
+        - sa201/opencv:4.9.0-jdk17-ubuntu-22.04
       args:
         BASE_IMAGE: sa201/amazoncorretto:17-ubuntu-22.04
     depends_on:
@@ -32,10 +40,14 @@ services:
     image: sa201/amazoncorretto:21-ubuntu-22.04
     build:
       context: jvm/amazon_corretto/21
+      cache_from:
+        - sa201/amazoncorretto:21-ubuntu-22.04
   opencv_4.9.0_jdk21_ubuntu_22.04:
     image: sa201/opencv:4.9.0-jdk21-ubuntu-22.04
     build:
       context: opencv/4.9.0
+      cache_from:
+        - sa201/opencv:4.9.0-jdk21-ubuntu-22.04
       args:
         BASE_IMAGE: sa201/amazoncorretto:21-ubuntu-22.04
     depends_on:
